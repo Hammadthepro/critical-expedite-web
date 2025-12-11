@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Location",
-    content: "Fort Myers, Florida",
+    content: "3100 Evans Ave, Fort Myers, FL 33901",
     href: null,
   },
   {
