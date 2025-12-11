@@ -34,8 +34,8 @@ const Header = () => {
               <span className="hidden md:inline">info@criticalexpeditefreightllc.com</span>
             </a>
           </div>
-          <div className="text-primary-foreground/80 text-xs sm:text-sm">
-            Fort Myers, Florida
+          <div className="text-primary-foreground/80 text-xs sm:text-sm hidden sm:block">
+            3100 Evans Ave, Fort Myers, FL 33901
           </div>
         </div>
       </div>
