@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -34,7 +34,7 @@ const Header = () => {
               <span className="hidden md:inline">info@criticalexpeditefreightllc.com</span>
             </a>
           </div>
-          <div className="text-muted-foreground/80">
+          <div className="text-primary-foreground/80 text-xs sm:text-sm">
             Fort Myers, Florida
           </div>
         </div>
@@ -43,10 +43,10 @@ const Header = () => {
       {/* Main Navigation */}
       <nav className="bg-background/95 backdrop-blur-md shadow-md">
         <div className="container-custom px-4">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-20 md:h-24">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
-              <img src={logo} alt="Critical Expedite Freight LLC" className="h-14 md:h-16 w-auto" />
+              <img src={logo} alt="Critical Expedite Freight LLC" className="h-16 md:h-20 lg:h-24 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -55,7 +55,7 @@ const Header = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                     location.pathname === link.path
                       ? "text-accent bg-accent/10"
                       : "text-foreground hover:text-accent hover:bg-accent/5"

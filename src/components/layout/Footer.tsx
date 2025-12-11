@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 
 const Footer = () => {
   const quickLinks = [
@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <img src={logo} alt="Critical Expedite Freight LLC" className="h-16 w-auto brightness-0 invert" />
+            <img src={logo} alt="Critical Expedite Freight LLC" className="h-20 w-auto brightness-0 invert" />
             <p className="text-accent font-semibold text-lg">Where Trust Travels.</p>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Critical Expedite is an asset-based freight brokerage providing comprehensive logistics solutions for businesses nationwide. Delivering efficiency, reliability, and quality since 2008.
@@ -51,7 +51,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-3 text-sm">
                 <MapPin className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                Fort Myers, FL
+                <span>3100 Evans Ave<br />Fort Myers, FL 33901</span>
               </div>
             </div>
           </div>
