@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback, useEffect, useState } from "react";
 import freightBrokerage from "@/assets/freight-brokerage.jpg";
 import carrierServices from "@/assets/carrier-services.jpg";
 import dispatchServices from "@/assets/dispatch-services.jpg";
@@ -39,12 +41,66 @@ const services = [
   },
 ];
 
+const ServiceCard = ({ service }: { service: typeof services[0] }) => (
+  <Link
+    to={`/services#${service.id}`}
+    className="group bg-card rounded-2xl overflow-hidden shadow-md card-hover h-full flex flex-col"
+  >
+    <div className="relative h-48 sm:h-56 overflow-hidden">
+      <img
+        src={service.image}
+        alt={service.title}
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+    </div>
+    <div className="p-5 sm:p-6 flex flex-col flex-1">
+      <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
+        {service.title}
+      </h3>
+      <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
+        {service.description}
+      </p>
+      <span className="inline-flex items-center gap-2 text-accent font-semibold text-sm">
+        Learn More
+        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+      </span>
+    </div>
+  </Link>
+);
+
 const Services = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true, 
+    align: "start",
+    slidesToScroll: 1,
+  });
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(true);
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
   return (
     <section className="section-padding bg-muted">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
             Our Logistics <span className="text-accent">Solutions</span>
           </h2>
@@ -53,70 +109,49 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.slice(0, 3).map((service, index) => (
-            <Link
-              key={service.id}
-              to={`/services#${service.id}`}
-              className={`group bg-card rounded-2xl overflow-hidden shadow-md card-hover animate-fade-in-up`}
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="relative h-56 overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  {service.description}
-                </p>
-                <span className="inline-flex items-center gap-2 text-accent font-semibold text-sm">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </div>
-            </Link>
+        {/* Desktop Grid */}
+        <div className="hidden lg:grid grid-cols-3 gap-8">
+          {services.slice(0, 3).map((service) => (
+            <ServiceCard key={service.id} service={service} />
+          ))}
+        </div>
+        <div className="hidden lg:grid grid-cols-2 gap-8 mt-8 max-w-4xl mx-auto">
+          {services.slice(3).map((service) => (
+            <ServiceCard key={service.id} service={service} />
           ))}
         </div>
 
-        {/* Second Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-4xl mx-auto">
-          {services.slice(3).map((service, index) => (
-            <Link
-              key={service.id}
-              to={`/services#${service.id}`}
-              className={`group bg-card rounded-2xl overflow-hidden shadow-md card-hover animate-fade-in-up`}
-              style={{ animationDelay: `${(index + 3) * 100}ms` }}
+        {/* Mobile/Tablet Carousel */}
+        <div className="lg:hidden relative">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-4">
+              {services.map((service) => (
+                <div key={service.id} className="flex-[0_0_85%] sm:flex-[0_0_45%] min-w-0">
+                  <ServiceCard service={service} />
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Carousel Navigation */}
+          <div className="flex justify-center gap-4 mt-6">
+            <button
+              onClick={scrollPrev}
+              disabled={!canScrollPrev}
+              className="p-3 rounded-full bg-card shadow-md hover:bg-accent hover:text-accent-foreground transition-all disabled:opacity-50"
+              aria-label="Previous"
             >
-              <div className="relative h-56 overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  {service.description}
-                </p>
-                <span className="inline-flex items-center gap-2 text-accent font-semibold text-sm">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </div>
-            </Link>
-          ))}
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={scrollNext}
+              disabled={!canScrollNext}
+              className="p-3 rounded-full bg-card shadow-md hover:bg-accent hover:text-accent-foreground transition-all disabled:opacity-50"
+              aria-label="Next"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
       </div>
     </section>
