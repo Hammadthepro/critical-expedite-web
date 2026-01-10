@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Users, Truck, Shield, Clock, Award, Target } from "lucide-react";
-import dispatchServices from "@/assets/dispatch-services.jpg";
+import aboutImage from "@/assets/about-image.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const values = [
@@ -58,7 +58,7 @@ const AboutPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative">
                 <img
-                  src={dispatchServices}
+                  src={aboutImage}
                   alt="Our Operations"
                   className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                 />

@@ -1,5 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
-import dispatchServices from "@/assets/dispatch-services.jpg";
+import aboutImage from "@/assets/about-image.jpg";
 
 const features = [
   "Asset-based brokerage with own fleet",
@@ -19,7 +19,7 @@ const About = () => {
           <div className="relative animate-slide-in-left">
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
-                src={dispatchServices}
+                src={aboutImage}
                 alt="Critical Expedite Freight operations"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
