@@ -12,6 +12,7 @@ import Reviews from "./pages/Reviews";
 import FAQ from "./pages/FAQ";
 import CarrierSetup from "./pages/CarrierSetup";
 import Contact from "./pages/Contact";
+import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/carrier-setup" element={<CarrierSetup />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
