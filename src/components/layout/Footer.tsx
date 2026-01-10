@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import logo from "@/assets/logo.webp";
 
 const Footer = () => {
@@ -7,6 +7,7 @@ const Footer = () => {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Our Services", path: "/services" },
+    { name: "Gallery", path: "/gallery" },
     { name: "Contact Us", path: "/contact" },
     { name: "Carrier Sign Up", path: "/carrier-setup" },
     { name: "FAQs", path: "/faq" },
@@ -45,8 +46,7 @@ const Footer = () => {
                 <Phone className="w-4 h-4 text-accent" />
                 +1 (347) 452 6934
               </a>
-              <a href="mailto:info@criticalexpeditefreightllc.com" className="flex items-center gap-3 text-sm hover:text-accent transition-colors">
-                <Mail className="w-4 h-4 text-accent" />
+              <a href="mailto:info@criticalexpeditefreightllc.com" className="text-sm hover:text-accent transition-colors block">
                 info@criticalexpeditefreightllc.com
               </a>
               <div className="flex items-start gap-3 text-sm">
