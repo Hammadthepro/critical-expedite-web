@@ -26,51 +26,51 @@ import gallery17 from "@/assets/gallery/gallery-17.jpg";
 import gallery18 from "@/assets/gallery/gallery-18.jpg";
 import gallery19 from "@/assets/gallery/gallery-19.jpg";
 import gallery20 from "@/assets/gallery/gallery-20.jpg";
-
-// Also include the main service images in the gallery
-import freightBrokerage from "@/assets/freight-brokerage.jpg";
-import carrierServices from "@/assets/carrier-services.jpg";
-import dispatchServices from "@/assets/dispatch-services.jpg";
-import factoringServices from "@/assets/factoring-services.jpg";
-import warehousing from "@/assets/warehousing.jpg";
-import aboutImage from "@/assets/about-image.jpg";
-import servicesHero from "@/assets/services-hero.jpg";
-import whyChooseUs from "@/assets/why-choose-us.jpg";
-import reviewsHero from "@/assets/reviews-hero.jpg";
+import gallery21 from "@/assets/gallery/gallery-21.jpg";
+import gallery22 from "@/assets/gallery/gallery-22.jpg";
+import gallery23 from "@/assets/gallery/gallery-23.jpg";
+import gallery24 from "@/assets/gallery/gallery-24.jpg";
+import gallery25 from "@/assets/gallery/gallery-25.jpg";
+import gallery26 from "@/assets/gallery/gallery-26.jpg";
+import gallery27 from "@/assets/gallery/gallery-27.jpg";
+import gallery28 from "@/assets/gallery/gallery-28.jpg";
+import gallery29 from "@/assets/gallery/gallery-29.jpg";
+import gallery30 from "@/assets/gallery/gallery-30.jpg";
 
 const galleryImages = [
-  { src: gallery01, alt: "Fleet Operations", category: "Fleet" },
-  { src: gallery02, alt: "Freight Transportation", category: "Fleet" },
-  { src: gallery03, alt: "Cargo Delivery", category: "Operations" },
-  { src: gallery04, alt: "Trucking Services", category: "Fleet" },
-  { src: gallery05, alt: "Logistics Operations", category: "Operations" },
-  { src: gallery06, alt: "Freight Hauling", category: "Fleet" },
-  { src: gallery07, alt: "Transportation Services", category: "Fleet" },
-  { src: gallery08, alt: "Cargo Management", category: "Operations" },
-  { src: gallery09, alt: "Fleet Management", category: "Fleet" },
-  { src: gallery10, alt: "Delivery Services", category: "Operations" },
-  { src: gallery11, alt: "Team Member", category: "Team" },
-  { src: gallery12, alt: "Freightliner Truck", category: "Fleet" },
-  { src: gallery13, alt: "Gooseneck Trailer", category: "Equipment" },
-  { src: gallery14, alt: "Red International Truck", category: "Fleet" },
-  { src: gallery15, alt: "Heavy Equipment Load", category: "Operations" },
-  { src: gallery16, alt: "Branded Truck", category: "Fleet" },
-  { src: gallery17, alt: "Company Vehicle", category: "Fleet" },
-  { src: gallery18, alt: "Green Peterbilt", category: "Fleet" },
-  { src: gallery19, alt: "Flatbed Delivery", category: "Operations" },
-  { src: gallery20, alt: "Warehouse Loading", category: "Operations" },
-  { src: freightBrokerage, alt: "Freight Brokerage", category: "Services" },
-  { src: carrierServices, alt: "Carrier Services", category: "Services" },
-  { src: dispatchServices, alt: "Dispatch Services", category: "Services" },
-  { src: factoringServices, alt: "Factoring Services", category: "Services" },
-  { src: warehousing, alt: "Warehousing", category: "Services" },
-  { src: aboutImage, alt: "About Our Company", category: "Company" },
-  { src: servicesHero, alt: "Our Services", category: "Services" },
-  { src: whyChooseUs, alt: "Why Choose Us", category: "Company" },
-  { src: reviewsHero, alt: "Customer Reviews", category: "Company" },
+  { src: gallery01, alt: "White RAM truck at sunset", category: "Fleet" },
+  { src: gallery02, alt: "Flatbed trailer with covered cargo", category: "Equipment" },
+  { src: gallery03, alt: "Freightliner semi-truck with load", category: "Fleet" },
+  { src: gallery04, alt: "Fleet truck on delivery route", category: "Fleet" },
+  { src: gallery05, alt: "Heavy haul flatbed operations", category: "Operations" },
+  { src: gallery06, alt: "Gooseneck trailer at loading facility", category: "Equipment" },
+  { src: gallery07, alt: "Company truck with trailer attached", category: "Fleet" },
+  { src: gallery08, alt: "Freight hauling on rural highway", category: "Operations" },
+  { src: gallery09, alt: "Fleet management vehicle", category: "Fleet" },
+  { src: gallery10, alt: "Critical Expedite delivery truck", category: "Fleet" },
+  { src: gallery11, alt: "Mr. Peterson - Owner of Critical Expedite Freight", category: "Team" },
+  { src: gallery12, alt: "Freightliner Cascadia hauling pallets", category: "Fleet" },
+  { src: gallery13, alt: "Gooseneck trailer at job site", category: "Equipment" },
+  { src: gallery14, alt: "Red International LT semi-truck", category: "Fleet" },
+  { src: gallery15, alt: "Heavy equipment transport", category: "Operations" },
+  { src: gallery16, alt: "Critical Expedite branded work truck", category: "Fleet" },
+  { src: gallery17, alt: "Company RAM pickup at truck stop", category: "Fleet" },
+  { src: gallery18, alt: "Green Peterbilt 579", category: "Fleet" },
+  { src: gallery19, alt: "Flatbed with construction materials", category: "Operations" },
+  { src: gallery20, alt: "Warehouse cross-docking operations", category: "Operations" },
+  { src: gallery21, alt: "Critical Expedite work truck with flatbed trailer", category: "Fleet" },
+  { src: gallery22, alt: "RAM 3500 dually at truck yard", category: "Fleet" },
+  { src: gallery23, alt: "Tarp-covered load at gas station", category: "Operations" },
+  { src: gallery24, alt: "Wabash flatbed with steel coils", category: "Equipment" },
+  { src: gallery25, alt: "Freightliner on country road with lumber load", category: "Fleet" },
+  { src: gallery26, alt: "Container hauling at shipping yard", category: "Operations" },
+  { src: gallery27, alt: "RAM truck with gooseneck and rebar load", category: "Fleet" },
+  { src: gallery28, alt: "APE equipment on step deck trailer", category: "Equipment" },
+  { src: gallery29, alt: "Maroon International with industrial tanks", category: "Fleet" },
+  { src: gallery30, alt: "Green Peterbilt at parking area", category: "Fleet" },
 ];
 
-const categories = ["All", "Fleet", "Operations", "Equipment", "Services", "Team", "Company"];
+const categories = ["All", "Fleet", "Operations", "Equipment", "Team"];
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -97,117 +97,120 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen">
       <Header />
-      
-      {/* Hero Section */}
-      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroBg})` }}
-        >
-          <div className="absolute inset-0 bg-primary/80"></div>
-        </div>
-        <div className="relative z-10 text-center text-primary-foreground">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Our Gallery</h1>
-          <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto px-4">
-            Explore our fleet, operations, and the dedicated team behind Critical Expedite Freight
-          </p>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="section-padding bg-background">
-        <div className="container-custom">
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                  selectedCategory === category
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-muted text-muted-foreground hover:bg-primary/10"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+      <main>
+        {/* Hero Section */}
+        <section className="relative pt-40 pb-20 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroBg})` }}
+          >
+            <div className="absolute inset-0 bg-primary/90" />
           </div>
+          <div className="container-custom px-4 relative z-10 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground mb-6">
+              Our <span className="text-accent">Gallery</span>
+            </h1>
+            <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
+              Take a look at our fleet, operations, and the dedicated team behind Critical Expedite Freight.
+            </p>
+          </div>
+        </section>
 
-          {/* Image Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {filteredImages.map((image, index) => (
-              <div
-                key={index}
-                className="relative group cursor-pointer overflow-hidden rounded-lg aspect-square"
-                onClick={() => setSelectedImage(index)}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/60 transition-all duration-300 flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center text-primary-foreground">
-                    <p className="font-semibold">{image.alt}</p>
-                    <p className="text-sm text-primary-foreground/80">{image.category}</p>
+        {/* Gallery Section */}
+        <section className="section-padding bg-background">
+          <div className="container-custom">
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-3 mb-12">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-6 py-2 rounded-full font-medium transition-all ${
+                    selectedCategory === category
+                      ? "bg-accent text-accent-foreground shadow-md"
+                      : "bg-muted text-muted-foreground hover:bg-accent/20"
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+
+            {/* Gallery Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {filteredImages.map((image, index) => (
+                <div
+                  key={index}
+                  onClick={() => setSelectedImage(index)}
+                  className="relative aspect-square overflow-hidden rounded-xl cursor-pointer group"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-colors duration-300 flex items-center justify-center">
+                    <span className="text-primary-foreground font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-4">
+                      {image.alt}
+                    </span>
+                  </div>
+                  <div className="absolute bottom-2 left-2">
+                    <span className="text-xs bg-accent/90 text-accent-foreground px-2 py-1 rounded-full">
+                      {image.category}
+                    </span>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+        </section>
 
-          {/* Image count */}
-          <p className="text-center text-muted-foreground mt-8">
-            Showing {filteredImages.length} of {galleryImages.length} images
-          </p>
-        </div>
-      </section>
-
-      {/* Lightbox Dialog */}
-      <Dialog open={selectedImage !== null} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-5xl p-0 bg-black/95 border-none">
-          <button
-            onClick={() => setSelectedImage(null)}
-            className="absolute right-4 top-4 z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
-          >
-            <X className="w-6 h-6" />
-          </button>
-          
-          {selectedImage !== null && (
-            <div className="relative flex items-center justify-center min-h-[60vh]">
+        {/* Lightbox */}
+        <Dialog open={selectedImage !== null} onOpenChange={() => setSelectedImage(null)}>
+          <DialogContent className="max-w-5xl bg-background/95 backdrop-blur-sm border-none p-0">
+            <div className="relative">
               <button
-                onClick={handlePrevious}
-                className="absolute left-4 z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-4 right-4 z-10 p-2 bg-background/80 rounded-full hover:bg-background transition-colors"
+                aria-label="Close gallery lightbox"
               >
-                <ChevronLeft className="w-8 h-8" />
+                <X className="w-6 h-6" />
               </button>
               
-              <img
-                src={filteredImages[selectedImage].src}
-                alt={filteredImages[selectedImage].alt}
-                className="max-h-[80vh] max-w-full object-contain"
-              />
+              <button
+                onClick={handlePrevious}
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-background/80 rounded-full hover:bg-background transition-colors"
+                aria-label="Previous image"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
               
               <button
                 onClick={handleNext}
-                className="absolute right-4 z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-background/80 rounded-full hover:bg-background transition-colors"
+                aria-label="Next image"
               >
-                <ChevronRight className="w-8 h-8" />
+                <ChevronRight className="w-6 h-6" />
               </button>
-              
-              <div className="absolute bottom-4 left-0 right-0 text-center text-white">
-                <p className="font-semibold">{filteredImages[selectedImage].alt}</p>
-                <p className="text-sm text-white/70">{selectedImage + 1} / {filteredImages.length}</p>
-              </div>
-            </div>
-          )}
-        </DialogContent>
-      </Dialog>
 
+              {selectedImage !== null && (
+                <div className="p-4">
+                  <img
+                    src={filteredImages[selectedImage].src}
+                    alt={filteredImages[selectedImage].alt}
+                    className="w-full max-h-[80vh] object-contain rounded-lg"
+                  />
+                  <p className="text-center text-muted-foreground mt-4">
+                    {filteredImages[selectedImage].alt}
+                  </p>
+                </div>
+              )}
+            </div>
+          </DialogContent>
+        </Dialog>
+      </main>
       <Footer />
     </div>
   );

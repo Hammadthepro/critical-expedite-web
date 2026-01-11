@@ -2,8 +2,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Shield, Clock, Truck, DollarSign, Users, Headphones, Award, MapPin, CheckCircle2 } from "lucide-react";
+import { Shield, Clock, Truck, DollarSign, Users, Headphones, Award, MapPin, CheckCircle2, Quote } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import ownerImage from "@/assets/gallery/gallery-11.jpg";
 
 const reasons = [
   {
@@ -13,8 +14,8 @@ const reasons = [
   },
   {
     icon: Clock,
-    title: "15+ Years Experience",
-    description: "Over a decade and a half of industry expertise means we've seen it all and know how to handle any logistics challenge.",
+    title: "25+ Years Experience",
+    description: "Over two decades of industry expertise means we've seen it all and know how to handle any logistics challenge.",
   },
   {
     icon: Shield,
@@ -49,7 +50,7 @@ const reasons = [
 ];
 
 const stats = [
-  { value: "15+", label: "Years in Business" },
+  { value: "25+", label: "Years in Business" },
   { value: "500+", label: "Carrier Partners" },
   { value: "98%", label: "On-Time Delivery" },
   { value: "24/7", label: "Customer Support" },
@@ -92,8 +93,60 @@ const WhyChooseUs = () => {
           </div>
         </section>
 
-        {/* Reasons Grid */}
+        {/* Owner Section */}
         <section className="section-padding bg-background">
+          <div className="container-custom">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="relative">
+                <img
+                  src={ownerImage}
+                  alt="Mr. Peterson - Founder and Owner of Critical Expedite Freight LLC"
+                  className="rounded-2xl shadow-xl w-full h-[500px] object-cover object-top"
+                />
+                <div className="absolute -bottom-4 -right-4 bg-accent p-4 rounded-xl shadow-lg">
+                  <Award className="w-8 h-8 text-accent-foreground" />
+                </div>
+              </div>
+              <div>
+                <div className="inline-block bg-accent/10 px-4 py-2 rounded-full mb-4">
+                  <span className="text-accent font-semibold text-sm">Leadership</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+                  Led by <span className="text-accent">Experience</span>
+                </h2>
+                <div className="relative mb-6">
+                  <Quote className="w-8 h-8 text-accent/30 absolute -top-2 -left-2" />
+                  <p className="text-lg text-muted-foreground leading-relaxed pl-6 italic">
+                    "Hard work, consistency, and a genuine passion for this industry have been my guiding principles for over 25 years."
+                  </p>
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  Under the leadership of Mr. Peterson, a seasoned businessman with over 25 years in the transportation industry, Critical Expedite Freight has grown into a trusted name in logistics. His hands-on approach and deep understanding of the trucking community ensure that every client receives personalized, reliable service.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  From successfully running Classic Traffic School to building an asset-based brokerage with its own fleet, Mr. Peterson's journey reflects dedication, integrity, and an unwavering commitment to both drivers and customers.
+                </p>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="bg-muted p-4 rounded-xl text-center">
+                    <span className="text-xl font-bold text-accent block">25+</span>
+                    <span className="text-xs text-muted-foreground">Years</span>
+                  </div>
+                  <div className="bg-muted p-4 rounded-xl text-center">
+                    <span className="text-xl font-bold text-accent block">Own Fleet</span>
+                    <span className="text-xs text-muted-foreground">Asset-Based</span>
+                  </div>
+                  <div className="bg-muted p-4 rounded-xl text-center">
+                    <span className="text-xl font-bold text-accent block">Florida</span>
+                    <span className="text-xs text-muted-foreground">Based</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Reasons Grid */}
+        <section className="section-padding bg-muted">
           <div className="container-custom">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
@@ -118,7 +171,7 @@ const WhyChooseUs = () => {
         </section>
 
         {/* Commitment Section */}
-        <section className="section-padding bg-muted">
+        <section className="section-padding bg-background">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
@@ -129,7 +182,7 @@ const WhyChooseUs = () => {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {["Transparent Communication", "Reliable Delivery", "Competitive Pricing"].map((item, index) => (
-                  <div key={index} className="flex items-center justify-center gap-2 bg-card p-4 rounded-xl shadow-sm">
+                  <div key={index} className="flex items-center justify-center gap-2 bg-muted p-4 rounded-xl shadow-sm">
                     <CheckCircle2 className="w-5 h-5 text-accent" />
                     <span className="font-semibold">{item}</span>
                   </div>

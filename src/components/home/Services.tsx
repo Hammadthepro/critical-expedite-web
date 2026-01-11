@@ -13,30 +13,35 @@ const services = [
     title: "Freight Brokerage",
     description: "Connect your shipments with our extensive carrier network. As an asset-based brokerage, we provide reliable transportation solutions with advanced tracking systems (Macro Point & Trucker Tools) and competitive rates for all your freight needs.",
     image: freightBrokerage,
+    imageAlt: "Freight brokerage logistics with trucks lined up at distribution center",
     id: "freight-brokerage",
   },
   {
     title: "Carrier Services",
     description: "Access our verified network of professional carriers ready to move your freight. We match you with the right carriers for full truckload, LTL, and specialized transportation requirements.",
     image: carrierServices,
+    imageAlt: "Semi-truck fleet for carrier transportation services",
     id: "carrier-services",
   },
   {
     title: "Dispatch Services",
     description: "Expert dispatch support to keep your fleet moving efficiently. Our experienced team handles load coordination, route optimization, and 24/7 communication to maximize your operation's productivity.",
     image: dispatchServices,
+    imageAlt: "Truck dispatch center with fleet management operations",
     id: "dispatch-services",
   },
   {
     title: "Factoring Services",
     description: "Improve your cash flow with our freight factoring solutions. Get paid quickly on your invoices so you can focus on growing your business without waiting 30-90 days for payment.",
     image: factoringServices,
+    imageAlt: "Financial factoring services for trucking business cash flow",
     id: "factoring-services",
   },
   {
     title: "Warehousing",
     description: "Secure storage facilities with inventory management, packaging, and distribution support. Our strategically located warehouses help reduce transit times and streamline your supply chain.",
     image: warehousing,
+    imageAlt: "Warehouse storage facility with organized inventory management",
     id: "warehousing",
   },
 ];
@@ -49,7 +54,7 @@ const ServiceCard = ({ service }: { service: typeof services[0] }) => (
     <div className="relative h-48 sm:h-56 overflow-hidden">
       <img
         src={service.image}
-        alt={service.title}
+        alt={service.imageAlt}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
@@ -139,7 +144,7 @@ const Services = () => {
               onClick={scrollPrev}
               disabled={!canScrollPrev}
               className="p-3 rounded-full bg-card shadow-md hover:bg-accent hover:text-accent-foreground transition-all disabled:opacity-50"
-              aria-label="Previous"
+              aria-label="Previous service"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
@@ -147,7 +152,7 @@ const Services = () => {
               onClick={scrollNext}
               disabled={!canScrollNext}
               className="p-3 rounded-full bg-card shadow-md hover:bg-accent hover:text-accent-foreground transition-all disabled:opacity-50"
-              aria-label="Next"
+              aria-label="Next service"
             >
               <ChevronRight className="w-5 h-5" />
             </button>

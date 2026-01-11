@@ -16,6 +16,7 @@ const services = [
     title: "Freight Brokerage",
     icon: Truck,
     image: freightBrokerage,
+    imageAlt: "Freight brokerage logistics with trucks lined up at distribution center",
     description: "Connect your shipments with our extensive carrier network. As an asset-based brokerage, we provide reliable transportation solutions with advanced tracking systems and competitive rates for all your freight needs.",
     features: [
       "Full Truckload (FTL) Services",
@@ -31,6 +32,7 @@ const services = [
     title: "Carrier Services",
     icon: Users,
     image: carrierServices,
+    imageAlt: "Semi-truck fleet for carrier transportation services",
     description: "Access our verified network of professional carriers ready to move your freight. We match you with the right carriers for full truckload, LTL, and specialized transportation requirements.",
     features: [
       "Verified & Vetted Carrier Network",
@@ -46,6 +48,7 @@ const services = [
     title: "Dispatch Services",
     icon: HeadphonesIcon,
     image: dispatchServices,
+    imageAlt: "Truck dispatch center with fleet management operations",
     description: "Expert dispatch support to keep your fleet moving efficiently. Our experienced team handles load coordination, route optimization, and 24/7 communication to maximize your operation's productivity.",
     features: [
       "24/7 Dispatch Support",
@@ -61,6 +64,7 @@ const services = [
     title: "Factoring Services",
     icon: DollarSign,
     image: factoringServices,
+    imageAlt: "Financial factoring services for trucking business cash flow",
     description: "Improve your cash flow with our freight factoring solutions. Get paid quickly on your invoices so you can focus on growing your business without waiting 30-90 days for payment.",
     features: [
       "Same-Day Funding Available",
@@ -76,6 +80,7 @@ const services = [
     title: "Warehousing",
     icon: Warehouse,
     image: warehousingImg,
+    imageAlt: "Warehouse storage facility with organized inventory management",
     description: "Secure storage facilities with inventory management, packaging, and distribution support. Our strategically located warehouses help reduce transit times and streamline your supply chain.",
     features: [
       "Secure Storage Facilities",
@@ -124,7 +129,7 @@ const ServicesPage = () => {
                   <div className="relative">
                     <img
                       src={service.image}
-                      alt={service.title}
+                      alt={service.imageAlt}
                       className="rounded-2xl shadow-xl w-full h-[350px] object-cover"
                     />
                     <div className="absolute -bottom-4 -left-4 bg-accent p-4 rounded-xl shadow-lg">
