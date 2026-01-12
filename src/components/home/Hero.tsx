@@ -2,17 +2,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Truck, Shield, Clock } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center pt-36 md:pt-40 pb-24 overflow-hidden">
+  return <section className="relative min-h-screen flex items-center pt-36 md:pt-40 pb-24 overflow-hidden">
       {/* Background Image - Semi trucks on highway for freight logistics */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-        role="img"
-        aria-label="Semi trucks transporting freight on highway"
-      >
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${heroBg})`
+    }} role="img" aria-label="Semi trucks transporting freight on highway">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70" />
       </div>
 
@@ -59,7 +54,7 @@ const Hero = () => {
                 <Clock className="w-6 h-6 text-accent" />
               </div>
               <div>
-                <p className="text-2xl md:text-3xl font-bold text-primary-foreground">15+</p>
+                <p className="text-2xl md:text-3xl font-bold text-primary-foreground">25+</p>
                 <p className="text-sm text-primary-foreground/70">Years Experience</p>
               </div>
             </div>
@@ -87,8 +82,6 @@ const Hero = () => {
 
       {/* Decorative Elements */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
