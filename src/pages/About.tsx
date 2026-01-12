@@ -6,41 +6,32 @@ import { CheckCircle2, Users, Truck, Shield, Clock, Award, Target, Quote } from 
 import aboutImage from "@/assets/about-image.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 import ownerImage from "@/assets/gallery/gallery-21.jpg";
-
-const values = [
-  {
-    icon: Shield,
-    title: "Reliability",
-    description: "We deliver on our promises, every time. Your freight is in safe hands with our verified carrier network.",
-  },
-  {
-    icon: Clock,
-    title: "Efficiency",
-    description: "Time is money. Our streamlined processes and 24/7 operations ensure your shipments move fast.",
-  },
-  {
-    icon: Users,
-    title: "Partnership",
-    description: "We build lasting relationships with our clients, understanding your unique needs and growing with you.",
-  },
-  {
-    icon: Target,
-    title: "Innovation",
-    description: "Leveraging the latest technology including Macro Point and Trucker Tools for real-time tracking.",
-  },
-];
-
+const values = [{
+  icon: Shield,
+  title: "Reliability",
+  description: "We deliver on our promises, every time. Your freight is in safe hands with our verified carrier network."
+}, {
+  icon: Clock,
+  title: "Efficiency",
+  description: "Time is money. Our streamlined processes and 24/7 operations ensure your shipments move fast."
+}, {
+  icon: Users,
+  title: "Partnership",
+  description: "We build lasting relationships with our clients, understanding your unique needs and growing with you."
+}, {
+  icon: Target,
+  title: "Innovation",
+  description: "Leveraging the latest technology including Macro Point and Trucker Tools for real-time tracking."
+}];
 const AboutPage = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Header />
       <main>
         {/* Hero Section */}
         <section className="relative pt-40 pb-20 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${heroBg})` }}
-          >
+          <div className="absolute inset-0 bg-cover bg-center" style={{
+          backgroundImage: `url(${heroBg})`
+        }}>
             <div className="absolute inset-0 bg-primary/90" />
           </div>
           <div className="container-custom px-4 relative z-10 text-center">
@@ -58,11 +49,7 @@ const AboutPage = () => {
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative">
-                <img
-                  src={aboutImage}
-                  alt="Critical Expedite Freight fleet trucks and logistics operations"
-                  className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
-                />
+                <img src={aboutImage} alt="Critical Expedite Freight fleet trucks and logistics operations" className="rounded-2xl shadow-xl w-full h-[400px] object-cover" />
                 <div className="absolute -bottom-6 -right-6 bg-accent text-accent-foreground p-6 rounded-2xl shadow-xl">
                   <div className="text-center">
                     <span className="text-4xl font-bold block">25+</span>
@@ -84,12 +71,10 @@ const AboutPage = () => {
                   Today, we serve businesses nationwide, from small operations to major enterprises, all with the same commitment to excellence that started our journey over 25 years ago.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
-                  {["Asset-Based Operations", "Nationwide Coverage", "24/7 Support", "Real-Time Tracking"].map((item, index) => (
-                    <div key={index} className="flex items-center gap-2">
+                  {["Asset-Based Operations", "Nationwide Coverage", "24/7 Support", "Real-Time Tracking"].map((item, index) => <div key={index} className="flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-accent" />
                       <span className="text-sm font-medium">{item}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </div>
@@ -110,11 +95,7 @@ const AboutPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
                 <div className="relative">
-                  <img
-                    src={ownerImage}
-                    alt="Peterson - Founder and CEO of Critical Expedite Freight LLC"
-                    className="rounded-2xl shadow-xl w-full h-[500px] object-cover object-center"
-                  />
+                  <img alt="Peterson - Founder and CEO of Critical Expedite Freight LLC" className="rounded-2xl shadow-xl w-full h-[500px] object-cover object-center" src="/lovable-uploads/ad1f6f1a-1fe6-406d-bb4d-94465d77493a.jpg" />
                   <div className="absolute -bottom-4 -left-4 bg-primary p-4 rounded-xl shadow-lg">
                     <Award className="w-8 h-8 text-accent" />
                   </div>
@@ -125,7 +106,7 @@ const AboutPage = () => {
                   <span className="text-accent font-semibold text-sm">Founder & CEO</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">
-                  Peterson
+                  Mr Peterson
                 </h3>
                 <div className="relative mb-6">
                   <Quote className="w-8 h-8 text-accent/30 absolute -top-2 -left-2" />
@@ -170,15 +151,13 @@ const AboutPage = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {values.map((value, index) => (
-                <div key={index} className="bg-card p-6 rounded-2xl shadow-md card-hover text-center">
+              {values.map((value, index) => <div key={index} className="bg-card p-6 rounded-2xl shadow-md card-hover text-center">
                   <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-7 h-7 text-accent" />
                   </div>
                   <h3 className="text-lg font-bold text-foreground mb-2">{value.title}</h3>
                   <p className="text-sm text-muted-foreground">{value.description}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -199,8 +178,6 @@ const AboutPage = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default AboutPage;
