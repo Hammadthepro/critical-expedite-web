@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Shield, Clock, Truck, DollarSign, Users, Headphones, Award, MapPin, CheckCircle2, Quote } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import ownerImage from "@/assets/gallery/gallery-11.jpg";
+import ownerImage from "@/assets/gallery/gallery-21.jpg";
 
 const reasons = [
   {
@@ -100,8 +100,8 @@ const WhyChooseUs = () => {
               <div className="relative">
                 <img
                   src={ownerImage}
-                  alt="Mr. Peterson - Founder and Owner of Critical Expedite Freight LLC"
-                  className="rounded-2xl shadow-xl w-full h-[500px] object-cover object-top"
+                  alt="Peterson - Founder and CEO of Critical Expedite Freight LLC"
+                  className="rounded-2xl shadow-xl w-full h-[500px] object-cover object-center"
                 />
                 <div className="absolute -bottom-4 -right-4 bg-accent p-4 rounded-xl shadow-lg">
                   <Award className="w-8 h-8 text-accent-foreground" />
@@ -121,10 +121,10 @@ const WhyChooseUs = () => {
                   </p>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Under the leadership of Mr. Peterson, a seasoned businessman with over 25 years in the transportation industry, Critical Expedite Freight has grown into a trusted name in logistics. His hands-on approach and deep understanding of the trucking community ensure that every client receives personalized, reliable service.
+                  Under the leadership of Peterson, a seasoned businessman with over 25 years in the transportation industry, Critical Expedite Freight has grown into a trusted name in logistics. His hands-on approach and deep understanding of the trucking community ensure that every client receives personalized, reliable service.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  From successfully running Classic Traffic School to building an asset-based brokerage with its own fleet, Mr. Peterson's journey reflects dedication, integrity, and an unwavering commitment to both drivers and customers.
+                  From successfully running Classic Traffic School to building an asset-based brokerage with its own fleet, Peterson's journey reflects dedication, integrity, and an unwavering commitment to both drivers and customers.
                 </p>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="bg-muted p-4 rounded-xl text-center">

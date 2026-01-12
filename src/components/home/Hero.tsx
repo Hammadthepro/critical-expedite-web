@@ -6,10 +6,12 @@ import heroBg from "@/assets/hero-bg.jpg";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-36 md:pt-40 pb-24 overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image - Semi trucks on highway for freight logistics */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
+        role="img"
+        aria-label="Semi trucks transporting freight on highway"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70" />
       </div>
