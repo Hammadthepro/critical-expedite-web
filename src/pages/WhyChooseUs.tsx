@@ -5,68 +5,61 @@ import { Link } from "react-router-dom";
 import { Shield, Clock, Truck, DollarSign, Users, Headphones, Award, MapPin, CheckCircle2, Quote } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import ownerImage from "@/assets/gallery/gallery-21.jpg";
-
-const reasons = [
-  {
-    icon: Truck,
-    title: "Asset-Based Operations",
-    description: "We own our trucks and equipment, giving you guaranteed capacity and consistent service quality when you need it most.",
-  },
-  {
-    icon: Clock,
-    title: "25+ Years Experience",
-    description: "Over two decades of industry expertise means we've seen it all and know how to handle any logistics challenge.",
-  },
-  {
-    icon: Shield,
-    title: "Real-Time Tracking",
-    description: "Advanced tracking with Macro Point and Trucker Tools keeps you informed with live updates on every shipment.",
-  },
-  {
-    icon: DollarSign,
-    title: "Competitive Rates",
-    description: "Our extensive carrier network and asset ownership allows us to offer some of the most competitive rates in the industry.",
-  },
-  {
-    icon: Headphones,
-    title: "24/7 Support",
-    description: "Our dedicated team is available around the clock to handle any questions, updates, or emergencies.",
-  },
-  {
-    icon: Users,
-    title: "Verified Carrier Network",
-    description: "Every carrier in our network is thoroughly vetted for safety, insurance, and performance standards.",
-  },
-  {
-    icon: Award,
-    title: "Quality Guaranteed",
-    description: "We stand behind our service with a commitment to on-time delivery and complete shipment integrity.",
-  },
-  {
-    icon: MapPin,
-    title: "Nationwide Coverage",
-    description: "From coast to coast, we have the network and resources to move your freight anywhere in the country.",
-  },
-];
-
-const stats = [
-  { value: "25+", label: "Years in Business" },
-  { value: "500+", label: "Carrier Partners" },
-  { value: "98%", label: "On-Time Delivery" },
-  { value: "24/7", label: "Customer Support" },
-];
-
+const reasons = [{
+  icon: Truck,
+  title: "Asset-Based Operations",
+  description: "We own our trucks and equipment, giving you guaranteed capacity and consistent service quality when you need it most."
+}, {
+  icon: Clock,
+  title: "25+ Years Experience",
+  description: "Over two decades of industry expertise means we've seen it all and know how to handle any logistics challenge."
+}, {
+  icon: Shield,
+  title: "Real-Time Tracking",
+  description: "Advanced tracking with Macro Point and Trucker Tools keeps you informed with live updates on every shipment."
+}, {
+  icon: DollarSign,
+  title: "Competitive Rates",
+  description: "Our extensive carrier network and asset ownership allows us to offer some of the most competitive rates in the industry."
+}, {
+  icon: Headphones,
+  title: "24/7 Support",
+  description: "Our dedicated team is available around the clock to handle any questions, updates, or emergencies."
+}, {
+  icon: Users,
+  title: "Verified Carrier Network",
+  description: "Every carrier in our network is thoroughly vetted for safety, insurance, and performance standards."
+}, {
+  icon: Award,
+  title: "Quality Guaranteed",
+  description: "We stand behind our service with a commitment to on-time delivery and complete shipment integrity."
+}, {
+  icon: MapPin,
+  title: "Nationwide Coverage",
+  description: "From coast to coast, we have the network and resources to move your freight anywhere in the country."
+}];
+const stats = [{
+  value: "25+",
+  label: "Years in Business"
+}, {
+  value: "500+",
+  label: "Carrier Partners"
+}, {
+  value: "98%",
+  label: "On-Time Delivery"
+}, {
+  value: "24/7",
+  label: "Customer Support"
+}];
 const WhyChooseUs = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Header />
       <main>
         {/* Hero Section */}
         <section className="relative pt-40 pb-20 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${heroBg})` }}
-          >
+          <div className="absolute inset-0 bg-cover bg-center" style={{
+          backgroundImage: `url(${heroBg})`
+        }}>
             <div className="absolute inset-0 bg-primary/90" />
           </div>
           <div className="container-custom px-4 relative z-10 text-center">
@@ -83,12 +76,10 @@ const WhyChooseUs = () => {
         <section className="py-12 bg-accent">
           <div className="container-custom">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
+              {stats.map((stat, index) => <div key={index} className="text-center">
                   <p className="text-4xl md:text-5xl font-bold text-accent-foreground mb-2">{stat.value}</p>
                   <p className="text-accent-foreground/80 font-medium">{stat.label}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -98,11 +89,7 @@ const WhyChooseUs = () => {
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative">
-                <img
-                  src={ownerImage}
-                  alt="Peterson - Founder and CEO of Critical Expedite Freight LLC"
-                  className="rounded-2xl shadow-xl w-full h-[500px] object-cover object-center"
-                />
+                <img alt="Peterson - Founder and CEO of Critical Expedite Freight LLC" className="rounded-2xl shadow-xl w-full h-[500px] object-cover object-center" src="/lovable-uploads/1a3fa980-66d0-401e-9d2c-df41a00904f5.jpg" />
                 <div className="absolute -bottom-4 -right-4 bg-accent p-4 rounded-xl shadow-lg">
                   <Award className="w-8 h-8 text-accent-foreground" />
                 </div>
@@ -157,15 +144,13 @@ const WhyChooseUs = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {reasons.map((reason, index) => (
-                <div key={index} className="bg-card p-6 rounded-2xl shadow-md card-hover">
+              {reasons.map((reason, index) => <div key={index} className="bg-card p-6 rounded-2xl shadow-md card-hover">
                   <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
                     <reason.icon className="w-7 h-7 text-accent" />
                   </div>
                   <h3 className="text-lg font-bold text-foreground mb-2">{reason.title}</h3>
                   <p className="text-sm text-muted-foreground">{reason.description}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -181,12 +166,10 @@ const WhyChooseUs = () => {
                 At Critical Expedite Freight, we understand that your business depends on reliable logistics. That's why we've built our company around a simple promise: to deliver excellence in every shipment, every time.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                {["Transparent Communication", "Reliable Delivery", "Competitive Pricing"].map((item, index) => (
-                  <div key={index} className="flex items-center justify-center gap-2 bg-muted p-4 rounded-xl shadow-sm">
+                {["Transparent Communication", "Reliable Delivery", "Competitive Pricing"].map((item, index) => <div key={index} className="flex items-center justify-center gap-2 bg-muted p-4 rounded-xl shadow-sm">
                     <CheckCircle2 className="w-5 h-5 text-accent" />
                     <span className="font-semibold">{item}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -208,8 +191,6 @@ const WhyChooseUs = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default WhyChooseUs;
