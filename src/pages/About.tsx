@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle2, Users, Truck, Shield, Clock, Award, Target, Quote } from "lucide-react";
 import aboutImage from "@/assets/about-image.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
-import ownerImage from "@/assets/gallery/gallery-11.jpg";
+import ownerImage from "@/assets/gallery/gallery-21.jpg";
 
 const values = [
   {
@@ -60,7 +60,7 @@ const AboutPage = () => {
               <div className="relative">
                 <img
                   src={aboutImage}
-                  alt="Critical Expedite Freight Operations - Fleet trucks ready for delivery"
+                  alt="Critical Expedite Freight fleet trucks and logistics operations"
                   className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-accent text-accent-foreground p-6 rounded-2xl shadow-xl">
@@ -112,8 +112,8 @@ const AboutPage = () => {
                 <div className="relative">
                   <img
                     src={ownerImage}
-                    alt="Mr. Peterson - Founder and Owner of Critical Expedite Freight LLC"
-                    className="rounded-2xl shadow-xl w-full h-[500px] object-cover object-top"
+                    alt="Peterson - Founder and CEO of Critical Expedite Freight LLC"
+                    className="rounded-2xl shadow-xl w-full h-[500px] object-cover object-center"
                   />
                   <div className="absolute -bottom-4 -left-4 bg-primary p-4 rounded-xl shadow-lg">
                     <Award className="w-8 h-8 text-accent" />
@@ -125,7 +125,7 @@ const AboutPage = () => {
                   <span className="text-accent font-semibold text-sm">Founder & CEO</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">
-                  Mr. Peterson
+                  Peterson
                 </h3>
                 <div className="relative mb-6">
                   <Quote className="w-8 h-8 text-accent/30 absolute -top-2 -left-2" />
@@ -134,7 +134,7 @@ const AboutPage = () => {
                   </p>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Mr. Peterson is a seasoned businessman from Fort Myers, Florida, with over 25 years of experience in the transportation industry. After successfully running Classic Traffic School, he continued his journey and is now the owner of Critical Expedite Freight, an asset-based brokerage company with its own fleet of trucks.
+                  Peterson is a seasoned businessman from Fort Myers, Florida, with over 25 years of experience in the transportation industry. After successfully running Classic Traffic School, he continued his journey and is now the owner of Critical Expedite Freight, an asset-based brokerage company with its own fleet of trucks.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   Known for his strong relationships across the driving and trucking community, he is deeply committed to taking care of his drivers and delivering reliable freight services. His career reflects hard work, consistency, and a genuine passion for the industry he has proudly served for decades.

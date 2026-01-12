@@ -20,7 +20,7 @@ const About = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
                 src={aboutImage}
-                alt="Critical Expedite Freight operations"
+                alt="Critical Expedite Freight fleet trucks and logistics warehouse operations"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/40 to-transparent" />
