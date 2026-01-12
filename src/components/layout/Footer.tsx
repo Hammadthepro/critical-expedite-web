@@ -31,7 +31,7 @@ const Footer = () => {
       
       {/* CTA Banner */}
       <div className="bg-accent py-6">
-        <div className="container-custom flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="container-custom px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-center md:text-left">
             <h3 className="text-accent-foreground font-bold text-xl">Ready to streamline your logistics?</h3>
             <p className="text-accent-foreground/80 text-sm">Get a free quote today and experience the difference.</p>
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="container-custom py-16">
+      <div className="container-custom px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
           {/* Company Info */}
           <div className="space-y-6 lg:col-span-1">
@@ -164,7 +164,7 @@ const Footer = () => {
 
       {/* Copyright Bar */}
       <div className="border-t border-primary-foreground/10">
-        <div className="container-custom py-6">
+        <div className="container-custom px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/50">
             <p>© {new Date().getFullYear()} Critical Expedite Freight LLC. All rights reserved.</p>
             <div className="flex items-center gap-6">
